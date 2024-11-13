@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 import Nav from "./Nav";
+import Dropdown from "./Dropdown";
 
 const Header = () => {
+  const refInside = useRef(null);
 
   const [navOpened, setNavOpened] = useState(false);
+  const [dropdownOpened, setDropdownOpened] = useState(false);
 
   const toogleNav = () => {
     if (navOpened) {
@@ -23,9 +26,29 @@ const Header = () => {
     }
   }, [navOpened]);
 
+  const handleClickCaret = (e) => {
+    setDropdownOpened(true);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (refInside.current && !refInside.current.contains(e.target)) {
+        setDropdownOpened(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [refInside]);
 
   return (
     <div className="header">
+      {
+        dropdownOpened && (
+          <Dropdown refInside={refInside} />
+        )
+      }
       <div className="inner">
         <div className="up-header desktop-only">
           <div>Log in</div>
@@ -36,7 +59,7 @@ const Header = () => {
             LOGO
             <span className="tablet-end-desktop">OASIS</span>
           </div>
-          <Nav />
+          <Nav handleClickCaret={handleClickCaret} />
           <div className="nav-right">
             <div className="">Log in</div>
             <div onClick={toogleNav} className="hamburger">
