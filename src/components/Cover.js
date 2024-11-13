@@ -1,7 +1,8 @@
 function Cover() {
   return (
     <div className="cover">
-     COVER
+      <div className="inner">COVER</div>
+       
     </div>
   );
 }

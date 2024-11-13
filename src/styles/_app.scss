@@ -26,5 +26,35 @@ body {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
+
   min-height: 100vh;
+}
+
+.inner {
+  width: 1248px;
+  padding:0 24px;
+  margin:0 auto;
+  outline: 1px dashed green;
+}
+
+.btn {
+  background-color:v.$white;
+  border: 1px solid v.$blue;
+  color: v.$blue;
+  border-radius: 5px;
+  text-align: center;
+  height: 42px;
+  line-height: 42px;
+  width: 240px;
+
+  &.btn--blue {
+    background-color:v.$blue;
+    border: 1px solid v.$blue;
+    color: v.$white;
+  }
+  &.btn--gold {
+    background-color:v.$gold;
+    border: 1px solid v.$gold;
+    color: v.$blue;
+  }
 }

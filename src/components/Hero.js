@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <div className="hero">
-     HERO
+       <div className="inner">Hero</div>
     </div>
   );
 }
