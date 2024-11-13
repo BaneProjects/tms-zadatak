@@ -1,7 +1,7 @@
-function Button(props) {
+const Button = (props) => {
   return (
     <div className={"btn" + (props.gold ? " btn--gold" : "")}>
-      btn
+      {props.title}
     </div>
   );
 }

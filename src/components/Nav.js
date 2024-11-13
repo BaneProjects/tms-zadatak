@@ -1,16 +1,22 @@
 import Button from "./Button";
+import caret from "../assets/caret.png";
+import caretBlue from "../assets/caret-blue.png";
 
-function Nav() {
+const Nav = () => {
   return (
     <nav>
-      <div>Features</div>
-      <div>Demos</div>
-      <div>Features</div>
-      <div>Demos</div>
-      <div>Features</div>
-      <div>Demos</div>
-      <Button gold/>
-      <div className="hamburger">H</div>
+      <div className="nav-item">Features<span class="caret-white"><img src={caret} /></span></div>
+      <div className="nav-item">Demos</div>
+      <div className="nav-item">Who’ it for<span class="caret-white"><img src={caret} /></span><span class="caret-blue"><img src={caretBlue} /></span></div>
+      <div className="nav-item">Resources<span class="caret-white"><img src={caret} /></span></div>
+      <div className="nav-item">About us</div>
+      <div className="nav-item">Pricing</div>
+      <div className="nav-item nav-item--btn mobile-and-tablet">
+        <Button title="Sign Up" />
+      </div>
+      <div className="nav-item nav-item--btn">
+        <Button gold title="Book a Demo" />
+      </div>
     </nav>
   );
 }

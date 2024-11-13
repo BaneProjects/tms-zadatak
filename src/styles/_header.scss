@@ -1,6 +1,6 @@
 @use "vars.scss" as v;
 
-.header{
+.header {
   height: 128px;
   background-color: v.$blue;
   color: v.$white;
@@ -8,19 +8,20 @@
   font-size: 15px;
 
 
-  .up-header{
+  .up-header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
+
     >div {
       padding: 10px;
       margin-left: 20px;
     }
   }
 
-  .navi{
+  .navi {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -29,21 +30,120 @@
 
     .btn {
       width: 207px;
-      line-height: inherit;
       margin-left: 30px;
+    }
+
+    .nav-right {
+      display: none;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    .nav-item {
+      padding: 8px;
+      margin-left: 8px;
+
+      .caret-white {
+        margin-left: 6px;
+        position: relative;
+        top: -2px;
+      }
+
+      .caret-blue {
+        display: none;
+      }
     }
   }
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
+@media (max-width: v.$breakpoint-tablet) {
 
-  >div {
-    padding: 8px;
-    margin-left: 8px;
+  // tablet
+  .header {
+    height: 72px;
+
+    .navi {
+      .nav-right {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        margin-top: auto;
+      }
+    }
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  body.nav-opened {
+    .header {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+
+      nav {
+        position: fixed;
+        top: 72px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        /* padding: 24px 16px; */
+        padding: 24px 0px;
+        background-color: v.$white;
+        color: v.$blue;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+
+
+        .nav-item {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+
+          padding: 0px 16px;
+          margin: 0;
+          min-height: 45px;
+
+          &.nav-item--btn {
+            padding-top: 8px;
+          }
+
+          .caret-white {
+            display: none;
+          }
+
+          .caret-blue {
+            display: inline-block;
+            margin-left: auto;
+          }
+
+          &:nth-last-child(2) {
+            margin-top: auto;
+          }
+
+          .btn {
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }

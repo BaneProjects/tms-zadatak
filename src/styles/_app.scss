@@ -20,25 +20,24 @@ body {
   padding: 0;
 }
 
-.App{
+.App {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
-
   min-height: 100vh;
 }
 
 .inner {
   width: 1248px;
-  padding:0 24px;
-  margin:0 auto;
+  padding: 0 24px;
+  margin: 0 auto;
   outline: 1px dashed green;
 }
 
 .btn {
-  background-color:v.$white;
+  background-color: v.$white;
   border: 1px solid v.$blue;
   color: v.$blue;
   border-radius: 5px;
@@ -48,13 +47,55 @@ body {
   width: 240px;
 
   &.btn--blue {
-    background-color:v.$blue;
+    background-color: v.$blue;
     border: 1px solid v.$blue;
     color: v.$white;
   }
+
   &.btn--gold {
-    background-color:v.$gold;
+    background-color: v.$gold;
     border: 1px solid v.$gold;
     color: v.$blue;
+  }
+}
+
+
+.mobile-and-tablet {
+  display: none;
+}
+
+@media (max-width: v.$breakpoint-tablet) {
+
+  // tablet
+  .inner {
+    width: 100%;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-and-tablet {
+    display: block;
+  }
+
+  .btn {
+    width: unset;
+  }
+}
+
+@media (max-width: v.$breakpoint-mobile) {
+
+  // mobile
+  .desktop-only {
+    display: none !important;
+  }
+
+  .tablet-end-desktop {
+    display: none;
+  }
+
+  .mobile-and-tablet {
+    display: block;
   }
 }

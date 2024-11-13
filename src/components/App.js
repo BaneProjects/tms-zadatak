@@ -4,7 +4,7 @@ import Header from "./Header";
 import Hero from "./Hero";
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Cover />
