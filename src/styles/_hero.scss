@@ -1,0 +1,6 @@
+@use "vars.scss" as v;
+
+.hero{
+  flex: 1;
+  background-color: v.$white;
+}

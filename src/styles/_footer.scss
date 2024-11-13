@@ -1,0 +1,7 @@
+@use "vars.scss" as v;
+
+.footer{
+  background-color: v.$silver;
+  color:v.$blue;
+  height: 148px;
+}

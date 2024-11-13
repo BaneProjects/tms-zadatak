@@ -1,0 +1,30 @@
+@use "vars.scss" as v;
+
+* {
+  box-sizing: border-box;
+  outline: 1px dashed red;
+}
+
+html {
+  font-family: v.$font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
+body {
+  color: v.$blue;
+  background-color: v.$white;
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: 100vh;
+}

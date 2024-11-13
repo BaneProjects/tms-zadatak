@@ -1,0 +1,7 @@
+@use "vars.scss" as v;
+
+.header{
+  height: 128px;
+  background-color: v.$blue;
+  color: v.$white;
+}
