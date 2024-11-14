@@ -9,9 +9,9 @@ const Hero = () => {
         <div className="hero-container">
           <div className="hero-left">
             <div>
-              <p>White label booking software for agencies</p>
-              <p className="mainText">Sell Oasis’s <span>brandable scheduling platform</span> as your own</p>
-              <p className="text-bottom">Oasis White Label is the perfect solution for digital agencies and web developers working with clients who need a powerful booking system for their operation.</p>
+              <div className="text-top">White label booking software for agencies</div>
+              <div className="main-text">Sell Oasis’s <span>brandable scheduling platform</span> as your own</div>
+              <div className="text-bottom">Oasis White Label is the perfect solution for digital agencies and web developers working with clients who need a powerful booking system for their operation.</div>
             </div>
             <div className="buttons">
               <div>

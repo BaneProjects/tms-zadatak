@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { CgClose } from "react-icons/cg";
+import oasisLogo from "../assets/navimages/oasis-logo.png"
+import oasisText from "../assets/navimages/oasis-text.png"
+import burgerMenu from "../assets/navimages/burger-menu.png"
+import close from "../assets/navimages/close.png"
 import Nav from "./Nav";
 import Dropdown from "./Dropdown";
 
@@ -27,8 +29,8 @@ const Header = () => {
   }, [navOpened]);
 
   const handleClickCaret = (e) => {
-  
-  
+
+
     setDropdownOpened(true);
   };
 
@@ -58,18 +60,18 @@ const Header = () => {
         </div>
         <div className="navi">
           <div className="logo">
-            LOGO
-            <span className="tablet-end-desktop">OASIS</span>
+            <img src={oasisLogo} alt=""></img>
+            <img className="tablet-end-desktop" src={oasisText} alt=""></img>
           </div>
           <Nav handleClickCaret={handleClickCaret} />
           <div className="nav-right">
-            <div className="">Log in</div>
-            <div onClick={toogleNav} className="hamburger">
+            <div className="login">Log in</div>
+            <div onClick={toogleNav} className="burger-icon">
               {
                 navOpened ? (
-                  <CgClose />
+                 <img src={close} alt=""/>
                 ) : (
-                  <RxHamburgerMenu />
+                  <img src={burgerMenu} alt=""/>
                 )
               }
             </div>

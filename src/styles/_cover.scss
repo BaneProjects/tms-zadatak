@@ -1,10 +1,23 @@
 @use "vars.scss" as v;
 
 .cover {
+  position: relative;
   height: 112px;
-  background-image: linear-gradient(269.65deg, #333333 0%, #000000 100%);
   color: v.$white;
   font-family: v.$font-alfa;
+
+  background-image: url("../assets/coverimages/cover-img-left.png"), url("../assets/coverimages/cover-img-right.png"), linear-gradient(269.65deg, #333333 0%, #000000 100%);
+  background-repeat: no-repeat;
+  background-position-x: left, right, center;
+  background-size: contain, contain, cover;
+
+  >img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 28px;
+    width: 28px;
+  }
 
   .inner {
     display: flex;
@@ -40,19 +53,34 @@
 
     .countdown {
       width: 221px;
+
+      .sale {
+        height: 20px;
+        line-height: 20px;
+        background-color: v.$white;
+        color: v.$black-sale;
+        font-family: v.$font-sofia;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 5.25px;
+        text-align: center;
+      }
+
       .countdown-display {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: stretch;
+
         color: v.$green;
 
         >div {
-          width:38px;
+          width: 38px;
           text-align: center;
           font-size: 24px;
           font-weight: 400;
+
           span {
             display: block;
             margin-top: 8px;
@@ -69,7 +97,7 @@
 @media (max-width: v.$breakpoint-mobile) {
   .cover {
     height: unset;
-    
+    background-position-y: top, bottom, center;
     .inner {
       display: flex;
       flex-direction: column;
@@ -80,7 +108,7 @@
       padding-top: 12px;
       padding-bottom: 12px;
 
-      .shop-now{
+      .shop-now {
         margin-top: 10px;
       }
     }

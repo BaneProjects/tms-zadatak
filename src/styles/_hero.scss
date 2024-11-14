@@ -11,15 +11,29 @@
     justify-content: space-between;
     align-items: stretch;
     padding: 64px 0px;
-    .mainText{
+    .text-top{
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 16px;
+      background-color: v.$silver;
+      color: v.$black;
+      height: 26px;
+      line-height: 26px;
+      padding:0px 10px;
+      width:max-content ;
+    }
+    .main-text{
       font-size: 47px;
       font-weight: 600;
-       span{
+      padding-top: 24px;
+      padding-bottom: 24px;
+      span{
         color:v.$gold;
       }
     }
     .text-bottom{
       font-size: 20px;
+      padding-bottom: 24px;
     }
     
     .hero-left {
@@ -30,6 +44,11 @@
 
     .hero-right {
       max-width: 568px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
     }
     .buttons{
       display: flex;

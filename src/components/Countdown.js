@@ -32,7 +32,7 @@ const Countdown = () => {
   }, []);
   return (
     <div className="countdown">
-      <div>countdown: {counter}</div>
+      <div className="sale">SALE UP TO 60% OFF</div>
       <div className="countdown-display">
         <div>{time.day}<span>Days</span></div>
         <div>{formatTimeDigits(time.h)}<span>Hours</span></div>
