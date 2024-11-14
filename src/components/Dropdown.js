@@ -112,22 +112,22 @@ const Dropdown = ({ refInside }) => {
         <div className="dropdown-items">
           <div className="dropdown-col">
             {
-              colOne.map((item) => {
+              colOne.map((item, index) => {
                 if (item.isGroup) {
-                  return (<div className="group">{item.title}</div>)
+                  return (<div key={index} className="group">{item.title}</div>)
                 } else {
-                  return (<div><img src={item.icon} alt="" />{item.title}</div>)
+                  return (<div key={index}><img src={item.icon} alt="" />{item.title}</div>)
                 }
               })
             }
           </div>
           <div className="dropdown-col">
             {
-              colTwo.map((item) => {
+              colTwo.map((item, index) => {
                 if (item.isGroup) {
-                  return (<div className="group">{item.title}</div>)
+                  return (<div key={index} className="group">{item.title}</div>)
                 } else {
-                  return (<div><img src={item.icon} alt="" />{item.title}</div>)
+                  return (<div key={index} ><img src={item.icon} alt="" />{item.title}</div>)
                 }
               })
             }
@@ -145,11 +145,11 @@ const Dropdown = ({ refInside }) => {
       <div className="dropdown-right">
         <div className="dropdown-col">
           {
-            colThree.map((item) => {
+            colThree.map((item, index) => {
               if (item.isGroup) {
-                return (<div className="group">{item.title}</div>)
+                return (<div key={index} className="group">{item.title}</div>)
               } else {
-                return (<div><img src={item.icon} alt="" />{item.title}</div>)
+                return (<div key={index} ><img src={item.icon} alt="" />{item.title}</div>)
               }
             })
           }
@@ -158,6 +158,5 @@ const Dropdown = ({ refInside }) => {
     </div>
   );
 };
-
 
 export default Dropdown;

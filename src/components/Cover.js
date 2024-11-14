@@ -3,17 +3,13 @@ import Countdown from "./Countdown";
 import closeCover from "../assets/coverimages/close-cover.png";
 
 const Cover = () => {
-  const [coverClosed, setCoverClosed] = useState(true);
-
-  if(coverClosed === false) {
-    return null;
-  }
+  const [coverOpened, setCoverOpened] = useState(true);
 
   return (
-    <div className="cover">
+    <div className={"cover" + (coverOpened ? "" : " cover--closed")}>
 
       <img src={closeCover} alt="close" onClick={() => {
-        setCoverClosed(false);
+        setCoverOpened(false);
       }} />
 
       <div className="inner">
@@ -31,6 +27,6 @@ const Cover = () => {
 
     </div>
   );
-}
+};
 
 export default Cover; 

@@ -11,7 +11,8 @@
     justify-content: space-between;
     align-items: stretch;
     padding: 64px 0px;
-    .text-top{
+
+    .text-top {
       font-size: 15px;
       font-weight: 600;
       border-radius: 16px;
@@ -19,27 +20,30 @@
       color: v.$black;
       height: 26px;
       line-height: 26px;
-      padding:0px 10px;
-      width:max-content ;
+      padding: 0px 10px;
+      width: max-content;
     }
-    .main-text{
+
+    .main-text {
       font-size: 47px;
       font-weight: 600;
       padding-top: 24px;
       padding-bottom: 24px;
-      span{
-        color:v.$gold;
+
+      span {
+        color: v.$gold;
       }
     }
-    .text-bottom{
+
+    .text-bottom {
       font-size: 20px;
       padding-bottom: 24px;
     }
-    
+
     .hero-left {
       width: 568px;
       margin-right: 64px;
-      
+
     }
 
     .hero-right {
@@ -50,7 +54,8 @@
       justify-content: center;
       align-items: center;
     }
-    .buttons{
+
+    .buttons {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -58,10 +63,12 @@
       align-items: flex-start;
 
       text-align: center;
-      >div:first-child{
+
+      >div:first-child {
         margin-right: 20px;
       }
-      >div:last-child{
+
+      >div:last-child {
         >div {
           margin-top: 8px;
         }
@@ -84,6 +91,10 @@
         width: 100%;
         margin-right: 0px;
         text-align: center;
+
+        .text-top {
+          margin: 0px auto;
+        }
       }
 
       .hero-right {
@@ -96,31 +107,38 @@
         justify-content: center;
         align-items: center;
 
-        .player{
+        .player {
           width: 100%;
           max-width: 568px;
-          img{
+
+          img {
             width: 100%;
             height: auto;
+          }
+
+          iframe {
+            width: 100%;
           }
         }
       }
 
-      .buttons{
+      .buttons {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: stretch;
-        
+
         text-align: center;
-        >div:first-child{
+
+        >div:first-child {
           margin-right: 0px;
         }
+
         >.btn {
           margin-top: 16px;
         }
-        
+
       }
     }
   }

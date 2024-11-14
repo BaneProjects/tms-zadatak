@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import oasisLogo from "../assets/navimages/oasis-logo.png"
-import oasisText from "../assets/navimages/oasis-text.png"
-import burgerMenu from "../assets/navimages/burger-menu.png"
-import close from "../assets/navimages/close.png"
+import oasisLogo from "../assets/navimages/oasis-logo.png";
+import oasisText from "../assets/navimages/oasis-text.png";
+import burgerMenu from "../assets/navimages/burger-menu.png";
+import close from "../assets/navimages/close.png";
 import Nav from "./Nav";
 import Dropdown from "./Dropdown";
 
@@ -28,16 +28,22 @@ const Header = () => {
     }
   }, [navOpened]);
 
-  const handleClickCaret = (e) => {
-
-
-    setDropdownOpened(true);
+  const handleClickCaret = (e) => {    
+    setDropdownOpened(dropdownOpened => {
+      if (dropdownOpened) {
+        return false;
+      } else {
+        return true;
+      }
+    });
   };
 
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (refInside.current && !refInside.current.contains(e.target)) {
-        setDropdownOpened(false);
+        if (!e.target.classList.contains("with-dropdown")) {
+          setDropdownOpened(false);
+        } 
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -69,9 +75,9 @@ const Header = () => {
             <div onClick={toogleNav} className="burger-icon">
               {
                 navOpened ? (
-                 <img src={close} alt=""/>
+                  <img src={close} alt="" />
                 ) : (
-                  <img src={burgerMenu} alt=""/>
+                  <img src={burgerMenu} alt="" />
                 )
               }
             </div>
@@ -80,6 +86,6 @@ const Header = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

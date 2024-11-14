@@ -4,8 +4,6 @@ import { decrementTime, formatTimeDigits } from "../utils/countdown-helper";
 const Countdown = () => {
   const intervalRef = useRef(null);
 
-  const [counter, setCounter] = useState(5000);
-
   const [time, setTime] = useState({
     day: 7,
     h: 13,
@@ -13,14 +11,10 @@ const Countdown = () => {
     sec: 36,
   });
 
-
   useEffect(() => {
     if (!intervalRef.current) {
       const intervalId = setInterval(() => {
-        setCounter(counter => {
-          return counter - 1;
-        });
-        setTime(time=>{
+        setTime(time => {
           return decrementTime(time);
         });
       }, 1000);

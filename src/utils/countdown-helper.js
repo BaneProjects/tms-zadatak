@@ -1,16 +1,13 @@
 
-
 export const decrementTime = (time) => {
   let {
     day, h, min, sec
   } = time;
 
   //
-  if (day === 0 && h === 0 && min === 0 && sec === 0) {
-    // counter reach zero
+  if (day === 0 && h === 0 && min === 0 && sec === 0) { // counter reach zero
     return time; // retun time with no changes
-  } else {
-    // decrementing tim
+  } else { // decrementing tim
     //
     sec -= 1;
     if (sec < 0) {

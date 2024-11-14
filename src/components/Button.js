@@ -4,6 +4,6 @@ const Button = (props) => {
       {props.title}
     </div>
   );
-}
+};
 
 export default Button;

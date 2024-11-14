@@ -35,6 +35,7 @@
       flex-wrap: nowrap;
       justify-content: flex-start;
       align-items: center;
+
       img {
         height: 40px;
         width: 40px;
@@ -54,7 +55,8 @@
 
     .nav-right {
       display: none;
-      .login{
+
+      .login {
         margin-right: 40px;
       }
     }
@@ -67,12 +69,13 @@
     justify-content: flex-start;
     align-items: center;
 
-    .burger-icon{
-      img{
+    .burger-icon {
+      img {
         width: 40px;
         height: 40px;
       }
     }
+
     .nav-item {
       padding: 8px;
       margin-left: 8px;
@@ -103,8 +106,6 @@
         flex-wrap: nowrap;
         justify-content: flex-end;
         align-items: center;
-
-        /* margin-top: auto; */
       }
     }
   }
@@ -126,7 +127,6 @@
         left: 0px;
         right: 0px;
         bottom: 0px;
-        /* padding: 24px 16px; */
         padding: 24px 0px;
         background-color: v.$white;
         color: v.$blue;

@@ -11,6 +11,13 @@
   background-position-x: left, right, center;
   background-size: contain, contain, cover;
 
+  &.cover--closed {
+    height: 0px;
+    min-height: 0px;
+    transition: all 0.2s ease;
+    overflow: hidden;
+  }
+
   >img {
     position: absolute;
     top: 20px;
@@ -98,6 +105,7 @@
   .cover {
     height: unset;
     background-position-y: top, bottom, center;
+
     .inner {
       display: flex;
       flex-direction: column;

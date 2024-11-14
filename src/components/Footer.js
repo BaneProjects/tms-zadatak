@@ -6,9 +6,8 @@ import ratingLogos from "../assets/footerimages/ratingLogos.png";
 import ratingLogos2 from "../assets/footerimages/ratingLogos2.png";
 import ratingLogos3 from "../assets/footerimages/ratingLogos3.png";
 import ratingLogos4 from "../assets/footerimages/ratingLogos4.png";
-
 import iconGlobal from "../assets/footerimages/icon2.png";
-;
+
 const Footer = () => {
 
   const cards = [
@@ -20,7 +19,7 @@ const Footer = () => {
     },
     {
       bigIcon: ratingLogos2,
-      smallIcon:starRed,
+      smallIcon: starRed,
       rating: '4.6',
       title: 'Rating on G2'
     },
@@ -42,7 +41,7 @@ const Footer = () => {
     <div className="footer">
       <div className="inner">
         <div className="card-special desktop-only">
-          <img src={iconGlobal} />
+          <img src={iconGlobal} alt="icon" />
           <div>
             <div><b>1500+</b></div>
             <div>GLOBAL AGENCIES</div>
