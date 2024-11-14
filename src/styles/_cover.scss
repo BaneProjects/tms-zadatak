@@ -1,9 +1,10 @@
 @use "vars.scss" as v;
 
-.cover{
+.cover {
   height: 112px;
   background-image: linear-gradient(269.65deg, #333333 0%, #000000 100%);
-  color:v.$white;
+  color: v.$white;
+  font-family: v.$font-alfa;
 
   .inner {
     display: flex;
@@ -11,5 +12,77 @@
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+
+    height: 100%;
+
+    .promo-title {
+      color: v.$white;
+      letter-spacing: 5.25px;
+      font-size: 24px;
+      font-weight: 400;
+
+      >div:last-child {
+        color: v.$green;
+      }
+    }
+
+    .shop-now {
+      background-color: v.$green;
+      color: v.$black-caver;
+      width: 147px;
+      min-height: 35px;
+      line-height: 35px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 5.25px;
+    }
+
+    .countdown {
+      width: 221px;
+      .countdown-display {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        color: v.$green;
+
+        >div {
+          width:38px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: 400;
+          span {
+            display: block;
+            margin-top: 8px;
+            font-size: 10px;
+            font-weight: 400;
+            color: v.$white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: v.$breakpoint-mobile) {
+  .cover {
+    height: unset;
+    
+    .inner {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      .shop-now{
+        margin-top: 10px;
+      }
+    }
   }
 }

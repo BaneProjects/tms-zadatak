@@ -6,18 +6,16 @@ const Cover = () => {
     <div className="cover">
 
       <div className="inner">
-        <div>
-          <p>Black Friday</p>
-          <p>Cyber Monday</p>
+        <div className="promo-title">
+          <div>Black Friday</div>
+          <div>Cyber Monday</div>
         </div>
 
-        <div>
+        <div className="tablet-end-desktop">
           <Countdown/>
         </div>
 
-        <div>
-          <p>Shop Now</p>
-        </div>
+        <div className="shop-now">Shop Now</div>
       </div>
 
     </div>
