@@ -3,9 +3,6 @@ import star from "../assets/star.png";
 import group_icon from "../assets/group_1238.png";
 import icon2 from "../assets/icon2.png";
 
-
-
-
 const Footer = () => {
 
   const cards = [
@@ -35,7 +32,6 @@ const Footer = () => {
     },
   ];
 
-
   return (
     <div className="footer">
       <div className="inner">
@@ -51,6 +47,7 @@ const Footer = () => {
           cards.map((card, index) => {
             return (
               <Card
+                key={index}
                 bigIcon={card.bigIcon}
                 smallIcon={card.smallIcon}
                 rating={card.rating}
@@ -59,11 +56,9 @@ const Footer = () => {
             );
           })
         }
-
-
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

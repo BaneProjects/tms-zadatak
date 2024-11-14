@@ -1,5 +1,5 @@
 import Button from "./Button";
-import player from "../assets/player.png";
+import Player from "./Player";
 
 const Hero = () => {
   return (
@@ -23,9 +23,7 @@ const Hero = () => {
           </div>
 
           <div className="hero-right">
-            <div className="player">
-              <img src={player} />
-            </div>
+            <Player />
           </div>
         </div>
 
