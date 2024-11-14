@@ -27,6 +27,8 @@ const Header = () => {
   }, [navOpened]);
 
   const handleClickCaret = (e) => {
+  
+  
     setDropdownOpened(true);
   };
 

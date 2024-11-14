@@ -1,6 +1,18 @@
 import Button from "./Button";
-import govermentImg from "../assets/dropdownimages/govermentImg.png"
-  ;
+import govermentImg from "../assets/dropdownimages/govermentImg.png";
+import digitalBusinessesImg from "../assets/dropdownimages/digitalBusinessesImg.png";
+import salesImg from "../assets/dropdownimages/salesImg.png";
+import hrImg from "../assets/dropdownimages/hrImg.png";
+import retailImg from "../assets/dropdownimages/retailImg.png";
+import salonsImg from "../assets/dropdownimages/salonsImg.png";
+import barberShopImg from "../assets/dropdownimages/barberShopImg.png";
+import individualImg from "../assets/dropdownimages/individualImg.png";
+import homeServicesImg from "../assets/dropdownimages/homeServicesImg.png";
+import cleaningImg from "../assets/dropdownimages/cleaningImg.png";
+import servicesImg from "../assets/dropdownimages/servicesImg.png";
+import educationImg from "../assets/dropdownimages/educationImg.png";
+import fitnesImg from "../assets/dropdownimages/fitnesImg.png";
+
 const Dropdown = ({ refInside }) => {
 
   const colOne = [
@@ -9,87 +21,87 @@ const Dropdown = ({ refInside }) => {
       title: "Professional services",
     },
     {
-      title: "Digital businesses",
+      title: "Government & Administration",
       icon: govermentImg,
     },
     {
       title: "Digital businesses",
-      icon: govermentImg,
+      icon: digitalBusinessesImg,
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "B2B sales",
+      icon: salesImg,
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "HR & Recruitment",
+      icon: hrImg,
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Retail",
+      icon: retailImg,
     },
 
     {
       isGroup: true,
-      title: "Professional services",
+      title: "BEAUTY AND HAIR",
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Salons",
+      icon: salonsImg,
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Barbershop",
+      icon: barberShopImg,
     },
   ];
 
   const colTwo = [
     {
       isGroup: true,
-      title: "Professional services",
+      title: "PERSONAL SERVICES",
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Individual business owners",
+      icon: individualImg,
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Home Services",
+      icon: homeServicesImg,
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Cleaning services",
+      icon: cleaningImg,
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Automotive services",
+      icon: servicesImg,
     },
 
     {
       isGroup: true,
-      title: "Professional services",
+      title: "EDUCATION AND COACHING",
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Digital Businesses",
+      icon: digitalBusinessesImg,
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Education & Teaching",
+      icon: educationImg,
     },
     {
-      title: "Digital businesses",
-      icon: govermentImg,
+      title: "Fitness & Sports",
+      icon: fitnesImg,
     },
   ];
 
   const colThree = [
     {
       isGroup: true,
-      title: "Professional services",
+      title: "WHITELABEL SOLUTIONS",
     },
     {
-      title: "Digital businesses",
+      title: "For Agencies",
       icon: govermentImg,
     },
   ];

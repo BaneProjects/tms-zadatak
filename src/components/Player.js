@@ -1,5 +1,5 @@
 import { useState } from "react";
-import player from "../assets/player.png";
+import player from "../assets/heroimages/player.png";
 
 const Player = () => {
   const [playerOpened, setPlayerOpened] = useState(false);
@@ -12,7 +12,7 @@ const Player = () => {
         ) : (
           <img src={player} onClick={() => {
             setPlayerOpened(true);
-          }} />
+          }} alt=""/>
         )
       }
     </div>

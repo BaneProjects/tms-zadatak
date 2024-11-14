@@ -3,4 +3,13 @@
 .cover{
   height: 112px;
   background-image: linear-gradient(269.65deg, #333333 0%, #000000 100%);
+  color:v.$white;
+
+  .inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
