@@ -31,6 +31,8 @@
       text-align: center;
       >div:first-child{
         margin-right: 20px;
+      }
+      >div:last-child{
         >div {
           margin-top: 8px;
         }
@@ -85,13 +87,11 @@
         text-align: center;
         >div:first-child{
           margin-right: 0px;
-
         }
         >.btn {
           margin-top: 16px;
         }
         
-
       }
     }
   }

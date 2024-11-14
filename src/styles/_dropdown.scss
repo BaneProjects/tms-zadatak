@@ -10,7 +10,8 @@
   position: absolute;
   top: 136px;
   left: calc(50% - 395px);
-  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.08), 0px 0px 6px 0px rgba(0,0,0,0.08);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08), 0px 0px 6px 0px rgba(0, 0, 0, 0.08);
+  color: v.$blue;
 
   display: flex;
   flex-direction: row;
@@ -19,21 +20,101 @@
   align-items: stretch;
 
   .dropdown-left {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
     background-color: v.$white;
     width: 568px;
     height: 100%;
+    padding: 24px;
+
+    .dropdown-col {
+      width: 375px;
+    }
   }
+
   .dropdown-right {
     background-color: v.$silver;
     width: 223px;
     height: 100%;
+    padding: 24px;
+  }
+
+  .dropdown-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .dropdown-col {
+    max-width: 274px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    >div {
+      line-height: 24px;
+      padding-bottom: 16px;
+
+      &.group {
+        text-transform: uppercase;
+      }
+
+      img {
+        vertical-align: middle;
+        height: 24px;
+        width: 24px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    padding: 12px;
+    text-wrap: nowrap;
+    background-color: v.$silver;
+    border-radius: 12px;
+    margin-top: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .btn {
+      margin-top: 0px;
+    }
+
+    >div {
+      text-align: left;
+      font-size: v.$font-roboto;
+      font-size: 14px;
+      font-weight: 500;
+      color: v.$semiblue;
+
+      b {
+        font-size: 15px;
+        font-weight: 500;
+        color: v.$blue;
+      }
+    }
   }
 }
 
 @media (max-width: v.$breakpoint-tablet) {
-  .dropdown{
+  .dropdown {
     display: none;
   }
 }
-
-
